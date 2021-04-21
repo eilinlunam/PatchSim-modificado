@@ -1,0 +1,55 @@
+2021-04-21 06:25:15,757 - patchsim - INFO - Starting PatchSim
+2021-04-21 06:25:15,758 - patchsim - INFO - Operating PatchSim under Mobility Model
+2021-04-21 06:25:15,764 - patchsim - INFO - Loaded patch attributes
+2021-04-21 06:25:15,765 - patchsim - INFO - Parameter: alpha=6.700000e-01, beta=6.500000e-01, gamma=4.000000e-01
+2021-04-21 06:25:15,765 - patchsim - INFO - No ParamFile loaded
+2021-04-21 06:25:15,765 - patchsim - INFO - Found WaningRate. Running SEIRS model.
+2021-04-21 06:25:15,772 - patchsim - INFO - Loaded temporal travel matrix
+2021-04-21 06:25:15,779 - patchsim - INFO - Loaded seeding schedule
+2021-04-21 06:25:15,784 - patchsim - INFO - Initializing simulation run...
+2021-04-21 06:25:15,784 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
+2021-04-21 06:25:15,983 - patchsim - INFO - Simulation complete. Time elapsed: 0.22559261322021484 seconds.
+2021-04-21 06:26:22,299 - patchsim - INFO - Starting PatchSim
+2021-04-21 06:26:22,300 - patchsim - INFO - Operating PatchSim under Mobility Model
+2021-04-21 06:26:22,308 - patchsim - INFO - Loaded patch attributes
+2021-04-21 06:26:22,308 - patchsim - INFO - Parameter: alpha=6.700000e-01, beta=6.500000e-01, gamma=4.000000e-01
+2021-04-21 06:26:22,309 - patchsim - INFO - No ParamFile loaded
+2021-04-21 06:26:22,309 - patchsim - INFO - Found WaningRate. Running SEIRS model.
+2021-04-21 06:26:22,320 - patchsim - INFO - Loaded temporal travel matrix
+2021-04-21 06:26:22,331 - patchsim - INFO - Loaded seeding schedule
+2021-04-21 06:26:22,343 - patchsim - INFO - Initializing simulation run...
+2021-04-21 06:26:22,343 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
+2021-04-21 06:26:22,433 - patchsim - INFO - Simulation complete. Time elapsed: 0.13334941864013672 seconds.
+2021-04-21 06:29:05,540 - patchsim - INFO - Starting PatchSim
+2021-04-21 06:29:05,541 - patchsim - INFO - Operating PatchSim under Mobility Model
+2021-04-21 06:29:05,549 - patchsim - INFO - Loaded patch attributes
+2021-04-21 06:29:05,550 - patchsim - INFO - Parameter: alpha=6.700000e-01, beta=6.500000e-01, gamma=4.000000e-01
+2021-04-21 06:29:05,550 - patchsim - INFO - No ParamFile loaded
+2021-04-21 06:29:05,550 - patchsim - INFO - Found WaningRate. Running SEIRS model.
+2021-04-21 06:29:05,566 - patchsim - INFO - Loaded temporal travel matrix
+2021-04-21 06:29:05,577 - patchsim - INFO - Loaded seeding schedule
+2021-04-21 06:29:05,584 - patchsim - INFO - Initializing simulation run...
+2021-04-21 06:29:05,585 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
+2021-04-21 06:29:05,633 - patchsim - INFO - Simulation complete. Time elapsed: 0.09278035163879395 seconds.
+2021-04-21 06:29:38,079 - patchsim - INFO - Starting PatchSim
+2021-04-21 06:29:38,079 - patchsim - INFO - Operating PatchSim under Mobility Model
+2021-04-21 06:29:38,083 - patchsim - INFO - Loaded patch attributes
+2021-04-21 06:29:38,084 - patchsim - INFO - Parameter: alpha=6.700000e-01, beta=6.500000e-01, gamma=4.000000e-01
+2021-04-21 06:29:38,084 - patchsim - INFO - No ParamFile loaded
+2021-04-21 06:29:38,084 - patchsim - INFO - Found WaningRate. Running SEIRS model.
+2021-04-21 06:29:38,089 - patchsim - INFO - Loaded temporal travel matrix
+2021-04-21 06:29:38,109 - patchsim - INFO - Loaded seeding schedule
+2021-04-21 06:29:38,113 - patchsim - INFO - Initializing simulation run...
+2021-04-21 06:29:38,113 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
+2021-04-21 06:29:38,157 - patchsim - INFO - Simulation complete. Time elapsed: 0.0779263973236084 seconds.
+2021-04-21 06:34:23,948 - patchsim - INFO - Starting PatchSim
+2021-04-21 06:34:23,949 - patchsim - INFO - Operating PatchSim under Mobility Model
+2021-04-21 06:34:23,958 - patchsim - INFO - Loaded patch attributes
+2021-04-21 06:34:23,958 - patchsim - INFO - Parameter: alpha=6.700000e-01, beta=6.500000e-01, gamma=4.000000e-01
+2021-04-21 06:34:23,958 - patchsim - INFO - No ParamFile loaded
+2021-04-21 06:34:23,958 - patchsim - INFO - Found WaningRate. Running SEIRS model.
+2021-04-21 06:34:23,967 - patchsim - INFO - Loaded temporal travel matrix
+2021-04-21 06:34:23,970 - patchsim - INFO - Loaded seeding schedule
+2021-04-21 06:34:23,974 - patchsim - INFO - Initializing simulation run...
+2021-04-21 06:34:23,974 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
+2021-04-21 06:34:24,016 - patchsim - INFO - Simulation complete. Time elapsed: 0.06720519065856934 seconds.
