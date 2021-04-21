@@ -53,3 +53,25 @@
 2021-04-21 06:34:23,974 - patchsim - INFO - Initializing simulation run...
 2021-04-21 06:34:23,974 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
 2021-04-21 06:34:24,016 - patchsim - INFO - Simulation complete. Time elapsed: 0.06720519065856934 seconds.
+2021-04-21 06:46:36,687 - patchsim - INFO - Starting PatchSim
+2021-04-21 06:46:36,687 - patchsim - INFO - Operating PatchSim under Mobility Model
+2021-04-21 06:46:36,698 - patchsim - INFO - Loaded patch attributes
+2021-04-21 06:46:36,698 - patchsim - INFO - Parameter: alpha=6.700000e-01, beta=6.500000e-01, gamma=4.000000e-01
+2021-04-21 06:46:36,699 - patchsim - INFO - No ParamFile loaded
+2021-04-21 06:46:36,699 - patchsim - INFO - Found WaningRate. Running SEIRS model.
+2021-04-21 06:46:36,711 - patchsim - INFO - Loaded temporal travel matrix
+2021-04-21 06:46:36,736 - patchsim - INFO - Loaded seeding schedule
+2021-04-21 06:46:36,741 - patchsim - INFO - Initializing simulation run...
+2021-04-21 06:46:36,741 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
+2021-04-21 06:46:36,788 - patchsim - INFO - Simulation complete. Time elapsed: 0.10080313682556152 seconds.
+2021-04-21 06:54:45,149 - patchsim - INFO - Starting PatchSim
+2021-04-21 06:54:45,150 - patchsim - INFO - Operating PatchSim under Mobility Model
+2021-04-21 06:54:45,164 - patchsim - INFO - Loaded patch attributes
+2021-04-21 06:54:45,165 - patchsim - INFO - Parameter: alpha=6.700000e-01, beta=6.500000e-01, gamma=4.000000e-01
+2021-04-21 06:54:45,165 - patchsim - INFO - No ParamFile loaded
+2021-04-21 06:54:45,166 - patchsim - INFO - Found WaningRate. Running SEIRS model.
+2021-04-21 06:54:45,176 - patchsim - INFO - Loaded temporal travel matrix
+2021-04-21 06:54:45,182 - patchsim - INFO - Loaded seeding schedule
+2021-04-21 06:54:45,186 - patchsim - INFO - Initializing simulation run...
+2021-04-21 06:54:45,186 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
+2021-04-21 06:54:45,240 - patchsim - INFO - Simulation complete. Time elapsed: 0.09023761749267578 seconds.
