@@ -478,9 +478,9 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
     I[t] = I[t] + actual_seed
 
     # vaccination for day t
-    #actual_vax = np.minimum(vaxs[t] * params["vaxeff"], S[t])
-    #S[t] = S[t] - actual_vax
-    #V[t] = V[t] + actual_vax
+    actual_vax = np.minimum(vaxs[t] * params["vaxeff"], S[t])
+    S[t] = S[t] - actual_vax
+    V[t] = V[t] + actual_vax
 
     N = patch_df.pops.to_numpy()
 
@@ -517,7 +517,7 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
     E[t + 1] = new_inf[t] + (1 - params["alpha"]) * E[t]
     I[t + 1] = params["alpha"] * E[t] + (1 - params["gamma"]) * I[t]
     R[t + 1] = params["gamma"] * I[t] + (1 - params["delta"]) * R[t]
-    #V[t + 1] = V[t]
+    V[t + 1] = V[t]
 
 
 def do_patchsim_det_force_step(State_Array, patch_df, params, theta, seeds, vaxs, t):
@@ -738,22 +738,29 @@ def run_disease_simulation(
         logger.setLevel(logging.INFO)
 
     logger.info("Starting PatchSim")
+    print("Comenzó simulación")
     start = time.time()
 
     logger.info("Operating PatchSim under %s Model", configs["Model"])
 
     if patch_df is None:
         patch_df = load_patch(configs)
+        print("Se cargó archivo de poblaciones")
     if params is None:
         params = load_params(configs, patch_df)
+        print("Se cargaron los parámetros")
     if Theta is None:
         Theta = load_Theta(configs, patch_df)
+        print("Se importó archivo de conexiones")
     if seeds is None:
         seeds = load_seed(configs, params, patch_df)
+        print("Se importó archivo de semillas o casos iniciales")
     if vaxs is None:
         vaxs = load_vax(configs, params, patch_df)
+        print("Se cargó vacunados 0")
 
     logger.info("Initializing simulation run...")
+    print("\nInicializando simulación...")
 
     if "RandomSeed" in configs:
         np.random.seed(int(configs["RandomSeed"]))
@@ -761,6 +768,7 @@ def run_disease_simulation(
         logger.info("Found RandomSeed. Running in stochastic mode...")
     else:
         stoch = False
+        print("Corriendo en modo determinístico...\n")
         logger.info("No RandomSeed found. Running in deterministic mode...")
 
     # Number of states (SEIRV) + One for tracking new infections

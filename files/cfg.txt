@@ -1,25 +1,17 @@
+
 PatchFile=files/pop.txt
 NetworkFile=files/net.txt
 NetworkType=Static
-
-ExposureRate=0.1
-InfectionRate=0.0012
-RecoveryRate=0.07
-WaningRate=0.03
-
-SymptomaticProbability=0.2
-AsymptomaticReduction=0.5
-PresymptomaticReduction=0.5
-
-ScalingFactor=1
-
 SeedFile=files/seeds.txt
-VaxFile=files/vaxs.txt
-VaxDelay=200
-VaxEfficacy=0
+ParamFile=files/parametros.txt
+
+ExposureRate=1.805e-07
+InfectionRate=0.1428
+RecoveryRate=0.2083
+ScalingFactor=0.0625
 
 StartDate=1
-Duration=200
+Duration=400
 
 LoadState=False
 SaveState=False
