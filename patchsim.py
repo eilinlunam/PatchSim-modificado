@@ -738,29 +738,22 @@ def run_disease_simulation(
         logger.setLevel(logging.INFO)
 
     logger.info("Starting PatchSim")
-    print("Comenzó simulación")
     start = time.time()
 
     logger.info("Operating PatchSim under %s Model", configs["Model"])
 
     if patch_df is None:
         patch_df = load_patch(configs)
-        print("Se cargó archivo de poblaciones")
     if params is None:
         params = load_params(configs, patch_df)
-        print("Se cargaron los parámetros")
     if Theta is None:
         Theta = load_Theta(configs, patch_df)
-        print("Se importó archivo de conexiones")
     if seeds is None:
         seeds = load_seed(configs, params, patch_df)
-        print("Se importó archivo de semillas o casos iniciales")
     if vaxs is None:
         vaxs = load_vax(configs, params, patch_df)
-        print("Se cargó vacunados 0")
 
     logger.info("Initializing simulation run...")
-    print("\nInicializando simulación...")
 
     if "RandomSeed" in configs:
         np.random.seed(int(configs["RandomSeed"]))
@@ -768,7 +761,6 @@ def run_disease_simulation(
         logger.info("Found RandomSeed. Running in stochastic mode...")
     else:
         stoch = False
-        print("Corriendo en modo determinístico...\n")
         logger.info("No RandomSeed found. Running in deterministic mode...")
 
     # Number of states (SEIRV) + One for tracking new infections

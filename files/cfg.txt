@@ -5,9 +5,9 @@ NetworkType=Static
 SeedFile=files/seeds.txt
 ParamFile=files/parametros.txt
 
-ExposureRate=1.805e-07
-InfectionRate=0.1428
-RecoveryRate=0.2083
+ExposureRate=1.006e-07
+InfectionRate=0.143
+RecoveryRate=0.208
 ScalingFactor=0.0625
 
 StartDate=1
