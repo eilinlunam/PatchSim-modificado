@@ -1336,3 +1336,13 @@
 2021-04-23 15:38:00,039 - patchsim - INFO - Initializing simulation run...
 2021-04-23 15:38:00,040 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
 2021-04-23 15:38:00,088 - patchsim - INFO - Simulation complete. Time elapsed: 0.10778546333312988 seconds.
+2021-04-23 22:11:45,063 - patchsim - INFO - Starting PatchSim
+2021-04-23 22:11:45,063 - patchsim - INFO - Operating PatchSim under Mobility Model
+2021-04-23 22:11:45,084 - patchsim - INFO - Loaded patch attributes
+2021-04-23 22:11:45,084 - patchsim - INFO - Parameter: alpha=1.430000e-01, beta=1.006000e-07, gamma=2.080000e-01
+2021-04-23 22:11:45,172 - patchsim - INFO - Loaded disease parameters from ParamFile
+2021-04-23 22:11:45,176 - patchsim - INFO - Loaded temporal travel matrix
+2021-04-23 22:11:45,179 - patchsim - INFO - Loaded seeding schedule
+2021-04-23 22:11:45,179 - patchsim - INFO - Initializing simulation run...
+2021-04-23 22:11:45,179 - patchsim - INFO - No RandomSeed found. Running in deterministic mode...
+2021-04-23 22:11:45,225 - patchsim - INFO - Simulation complete. Time elapsed: 0.16196489334106445 seconds.
