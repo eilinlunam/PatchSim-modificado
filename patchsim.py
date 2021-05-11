@@ -792,7 +792,6 @@ def run_disease_simulation(
         for t in range(params["T"]):
             curr_date = ref_date + timedelta(days=t + int(configs["StartDate"]))
             curr_week = int(curr_date.strftime("%U"))
-
             patchsim_step(
                 State_Array,
                 patch_df,

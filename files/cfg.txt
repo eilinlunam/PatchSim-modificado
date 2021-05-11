@@ -1,14 +1,13 @@
 
 PatchFile=files/pop.txt
 NetworkFile=files/net.txt
-NetworkType=Static
+NetworkType=Weekly
 SeedFile=files/seeds.txt
-ParamFile=files/parametros.txt
 
-ExposureRate=1.006e-07
+ExposureRate=0.4
 InfectionRate=0.143
 RecoveryRate=0.208
-ScalingFactor=0.0625
+ScalingFactor=0.086
 
 StartDate=1
 Duration=400
