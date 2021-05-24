@@ -7,7 +7,6 @@ SeedFile=files/seeds.txt
 ExposureRate=0.4
 InfectionRate=0.143
 RecoveryRate=0.208
-ScalingFactor=0.086
 
 StartDate=1
 Duration=400
