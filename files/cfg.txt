@@ -3,10 +3,12 @@ PatchFile=files/pop.txt
 NetworkFile=files/net.txt
 NetworkType=Weekly
 SeedFile=files/seeds.txt
+ParamFile=files/param.txt
 
-ExposureRate=0.4
-InfectionRate=0.143
-RecoveryRate=0.208
+ExposureRate=0.7
+InfectionRate=0.2173
+RecoveryRate=0.47
+SymptomaticProbability=0.15
 
 StartDate=1
 Duration=400
@@ -14,6 +16,7 @@ Duration=400
 LoadState=False
 SaveState=False
 
+Model=Mobility
 OutputFile=resultados.out
 OutputFormat=Whole
 LogFile=proceso.log

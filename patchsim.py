@@ -470,12 +470,13 @@ def do_patchsim_stoch_mobility_step(
 
 def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, vaxs, t):
     """Do step of the deterministic simulation."""
-    S, E, I, R, V, new_inf = State_Array  ## Aliases for the State Array
+    S, E, I, A, R, V, new_inf = State_Array  ## Aliases for the State Array
 
     # seeding for day t (seeding implies S->I)
     actual_seed = np.minimum(seeds[t], S[t])
     S[t] = S[t] - actual_seed
     I[t] = I[t] + actual_seed
+    A[t] = A[t]
 
     # vaccination for day t
     actual_vax = np.minimum(vaxs[t] * params["vaxeff"], S[t])
@@ -486,7 +487,7 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
 
     # Effective population after movement step
     N_eff = theta.T.dot(N)
-    I_eff = theta.T.dot(I[t])
+    I_eff = theta.T.dot(I[t]+A[t])
     E_eff = theta.T.dot(E[t])
 
     # Force of infection from symp/asymptomatic individuals
@@ -516,6 +517,7 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
     S[t + 1] = S[t] - new_inf[t] + params["delta"] * R[t]
     E[t + 1] = new_inf[t] + (1 - params["alpha"]) * E[t]
     I[t + 1] = params["alpha"] * E[t] + (1 - params["gamma"]) * I[t]
+    A[t + 1] = params["alpha"] * (1-params["symprob"])*E[t] + (1-params["gamma"]) * A[t]
     R[t + 1] = params["gamma"] * I[t] + (1 - params["delta"]) * R[t]
     V[t + 1] = V[t]
 
@@ -764,7 +766,7 @@ def run_disease_simulation(
         logger.info("No RandomSeed found. Running in deterministic mode...")
 
     # Number of states (SEIRV) + One for tracking new infections
-    dim = 5 + 1
+    dim = 6 + 1
     shape = (dim, params["T"] + 1, len(patch_df))
     if stoch:
         State_Array = np.zeros(shape, dtype=int)
@@ -788,7 +790,7 @@ def run_disease_simulation(
                 intervene_step(configs, patch_df, params, Theta, seeds, vaxs, t, State_Array)
 
     elif configs["NetworkType"] == "Weekly":
-        ref_date = datetime.strptime("Jan 1 2017", "%b %d %Y")  # is a Sunday
+        ref_date = datetime.strptime("Jan 1 2020", "%b %d %Y")  
         for t in range(params["T"]):
             curr_date = ref_date + timedelta(days=t + int(configs["StartDate"]))
             curr_week = int(curr_date.strftime("%U"))
