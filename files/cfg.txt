@@ -1,17 +1,16 @@
-
 PatchFile=files/pop.txt
 NetworkFile=files/net.txt
 NetworkType=Weekly
 SeedFile=files/seeds.txt
 ParamFile=files/param.txt
 
-ExposureRate=0.7
+ExposureRate2=2.5000133514404297
 InfectionRate=0.2173
 RecoveryRate=0.47
-SymptomaticProbability=0.15
+SymptomaticProbability=1
 
 StartDate=1
-Duration=400
+Duration=500
 
 LoadState=False
 SaveState=False

@@ -147,6 +147,7 @@ def load_params(configs, patch_df):
     params["T"] = int(configs["Duration"])
 
     beta = float(configs.get("ExposureRate", 0.0))
+    params["beta2"] = float(configs.get("ExposureRate2", 0.0))
     params["beta"] = np.full((len(patch_df), params["T"]), beta)
     params["alpha"] = float(configs.get("InfectionRate", 0.0))
     params["gamma"] = float(configs.get("RecoveryRate", 0.0))
@@ -159,7 +160,7 @@ def load_params(configs, patch_df):
         for i, id_ in enumerate(patch_df["id"]):
             if id_ in param_df.columns:
                 xs = param_df[id_]
-                params["beta"][i, 0 : len(xs)] = xs
+                params["beta"][i, 0 : len(xs)] = xs * params["beta2"]
         logger.info("Loaded disease parameters from ParamFile")
     else:
         logger.info("No ParamFile loaded")
@@ -493,7 +494,7 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
     # Force of infection from symp/asymptomatic individuals
     beta_j_eff = I_eff
     beta_j_eff = beta_j_eff / N_eff
-    beta_j_eff = beta_j_eff * params["beta"][:, t]
+    beta_j_eff = beta_j_eff * params["beta2"] * params["beta"][:, t]
     beta_j_eff = beta_j_eff * (
         (1 - params["kappa"]) * (1 - params["symprob"]) + params["symprob"]
     )
@@ -502,7 +503,7 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
     # Force of infection from presymptomatic individuals
     E_beta_j_eff = E_eff
     E_beta_j_eff = E_beta_j_eff / N_eff
-    E_beta_j_eff = E_beta_j_eff * params["beta"][:, t]
+    E_beta_j_eff = E_beta_j_eff * params["beta"][:, t] * params["beta2"]
     E_beta_j_eff = E_beta_j_eff * (1 - params["epsilon"])
     E_beta_j_eff = np.nan_to_num(E_beta_j_eff)
 
