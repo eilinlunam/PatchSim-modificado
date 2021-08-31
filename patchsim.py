@@ -503,7 +503,7 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
     # Force of infection from presymptomatic individuals
     E_beta_j_eff = E_eff
     E_beta_j_eff = E_beta_j_eff / N_eff
-    E_beta_j_eff = E_beta_j_eff * params["beta"][:, t] * params["beta2"]
+    E_beta_j_eff = E_beta_j_eff * params["beta"][:, t] * params["beta2"]  
     E_beta_j_eff = E_beta_j_eff * (1 - params["epsilon"])
     E_beta_j_eff = np.nan_to_num(E_beta_j_eff)
 
