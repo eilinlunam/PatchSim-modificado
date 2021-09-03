@@ -160,7 +160,7 @@ def load_params(configs, patch_df):
         for i, id_ in enumerate(patch_df["id"]):
             if id_ in param_df.columns:
                 xs = param_df[id_]
-                params["beta"][i, 0 : len(xs)] = xs * params["beta2"]
+                params["beta"][i, 0 : len(xs)] = xs
         logger.info("Loaded disease parameters from ParamFile")
     else:
         logger.info("No ParamFile loaded")
