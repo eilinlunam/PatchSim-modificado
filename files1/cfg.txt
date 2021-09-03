@@ -4,10 +4,10 @@ SeedFile=files1/seeds.txt
 ParamFile=files1/param.txt
 
 NetworkType=Weekly
-ExposureRate2=1.15625278
+ExposureRate2=4.16419183
 InfectionRate=0.2173
 RecoveryRate=0.47
-SymptomaticProbability=0.48307101
+SymptomaticProbability=0.13688945
 
 StartDate=1
 Duration=500

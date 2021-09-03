@@ -494,7 +494,7 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
     # Force of infection from symp/asymptomatic individuals
     beta_j_eff = I_eff
     beta_j_eff = beta_j_eff / N_eff
-    beta_j_eff = beta_j_eff * params["beta2"] * params["beta"][:, t]
+    beta_j_eff = beta_j_eff * params["beta2"]*params["beta"][:, t]
     beta_j_eff = beta_j_eff * (
         (1 - params["kappa"]) * (1 - params["symprob"]) + params["symprob"]
     )
@@ -503,7 +503,7 @@ def do_patchsim_det_mobility_step(State_Array, patch_df, params, theta, seeds, v
     # Force of infection from presymptomatic individuals
     E_beta_j_eff = E_eff
     E_beta_j_eff = E_beta_j_eff / N_eff
-    E_beta_j_eff = E_beta_j_eff * params["beta"][:, t] * params["beta2"]  
+    E_beta_j_eff = E_beta_j_eff * params["beta"][:, t]
     E_beta_j_eff = E_beta_j_eff * (1 - params["epsilon"])
     E_beta_j_eff = np.nan_to_num(E_beta_j_eff)
 
@@ -811,7 +811,7 @@ def run_disease_simulation(
                 intervene_step(configs, patch_df, params, Theta, seeds, vaxs, t, State_Array)
 
     elif configs["NetworkType"] == "Monthly":
-        ref_date = datetime.strptime("Jan 1 2017", "%b %d %Y")  # is a Sunday
+        ref_date = datetime.strptime("Jan 1 2020", "%b %d %Y")  # is a Sunday
         for t in range(params["T"]):
             curr_date = ref_date + timedelta(days=t + int(configs["StartDate"]))
             curr_month = int(curr_date.strftime("%m"))
