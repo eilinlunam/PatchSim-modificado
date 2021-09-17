@@ -2,7 +2,6 @@
 import time
 import logging
 from datetime import datetime, timedelta
-
 import numpy as np
 import pandas as pd
 
@@ -147,7 +146,7 @@ def load_params(configs, patch_df):
     params["T"] = int(configs["Duration"])
 
     beta = float(configs.get("ExposureRate", 0.0))
-    params["beta2"] = float(configs.get("ExposureRate2", 0.0))
+    params["beta2"] = float(configs.get("ExposureRate2", 1.0))
     params["beta"] = np.full((len(patch_df), params["T"]), beta)
     params["alpha"] = float(configs.get("InfectionRate", 0.0))
     params["gamma"] = float(configs.get("RecoveryRate", 0.0))
@@ -402,7 +401,6 @@ def do_patchsim_stoch_mobility_step(
 #     S_edge = np.concatenate(
 #         [
 #             np.random.multinomial(
-#                 S[t][x], theta[x] / (theta[x].sum() + 10 ** -12)
 #             ).reshape(1, len(N))
 #             for x in range(len(N))
 #         ],
@@ -835,7 +833,7 @@ def run_disease_simulation(
 
     if configs["SaveState"] == "True":
         logger.info("Saving StateArray to File")
-        np.save(configs["SaveFile"], State_Array[:, -1, :])
+        np.save(configs["SaveFile"], State_Array[:,int(configs["SaveDay"]), :])
 
     elapsed = time.time() - start
     logger.info("Simulation complete. Time elapsed: %s seconds.", elapsed)

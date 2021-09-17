@@ -1,0 +1,17 @@
+PatchFile,config1/pop.txt
+NetworkFile,config2/net.txt
+ParamFile,config2/param.txt
+NetworkType,Weekly
+ExposureRate2,1.2004792693078685
+InfectionRate,0.2173
+RecoveryRate,0.47
+SymptomaticProbability,0.7773297882285489
+StartDate,244
+Duration,500
+Model,Mobility
+LoadState,True
+LoadFile,config1/state.npy
+SaveState,False
+OutputFile,config2/resultados.out
+OutputFormat,Whole
+LogFile,config2/proceso.log
