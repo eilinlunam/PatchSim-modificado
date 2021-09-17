@@ -3,10 +3,10 @@ NetworkFile,config1/net.txt
 SeedFile,config1/seeds.txt
 ParamFile,config1/param.txt
 NetworkType,Weekly
-ExposureRate2,8.11924838857978
+ExposureRate2,8.170853240477062
 InfectionRate,0.2173
 RecoveryRate,0.47
-SymptomaticProbability,0.05510674502800428
+SymptomaticProbability,0.054833623811868126
 StartDate,1
 Duration,500
 Model,Mobility

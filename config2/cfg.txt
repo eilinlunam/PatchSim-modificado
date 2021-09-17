@@ -1,11 +1,10 @@
 PatchFile,config1/pop.txt
 NetworkFile,config2/net.txt
-ParamFile,config2/param.txt
 NetworkType,Weekly
-ExposureRate2,1.2004792693078685
+ExposureRate,1.71411
 InfectionRate,0.2173
 RecoveryRate,0.47
-SymptomaticProbability,0.7773297882285489
+SymptomaticProbability,0.2202
 StartDate,244
 Duration,500
 Model,Mobility
